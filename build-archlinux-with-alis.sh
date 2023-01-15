@@ -147,11 +147,11 @@ echo
 	echo
 	echo "Git clone ALIS"
 	mkdir $buildFolder/archiso/airootfs/alis
-	git clone https://github.com/ariser-installer/alis $buildFolder/archiso/airootfs/alis
+	git clone https://github.com/Twilight4/alis-installer $buildFolder/archiso/airootfs/alis
 	
 	echo "Git clone ALIS-DEV"
 	mkdir $buildFolder/archiso/airootfs/alis-dev
-	git clone https://github.com/ariser-installer/alis-dev $buildFolder/archiso/airootfs/alis-dev
+	git clone https://github.com/Twilight4/alis-installer-dev $buildFolder/archiso/airootfs/alis-dev
 
 echo
 echo "################################################################## "
