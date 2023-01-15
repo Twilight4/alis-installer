@@ -1,5 +1,4 @@
 ## Creating customized ISO and installing system
-
 ```
 git clone https://github.com/Twilight4/alis-iso.git                               # Download alis repo
 vim alis.conf                                                                     # Edit configuration
@@ -10,29 +9,7 @@ iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]" 
 alis                                                                              # Start installation using alis command
 ```
 
-
-
-
-
-
-
-
-
-
-## Packages installation
-After the base Arch Linux system is installed, alis can install packages with pacman and from AUR.
-
-```
-#                                  # After system installation start a user session
-# curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash     # Download alis scripts
-# # curl -sL https://git.io/JeaH6 | bash                                                   # Alternative download URL with URL shortener
-# ./alis-packages-asciinema.sh     # (Optional) Start asciinema video recording
-# vim alis-packages.conf           # Edit configuration and change variables values with your preferences (packages to install)
-# ./alis-packages.sh               # Start packages installation
-```
-
 ## Recovery
-
 Boot from the latest <a href="https://www.archlinux.org/download/">original Arch Linux installation media</a>. After boot use the following commands to start the recovery, this will allow you to enter in the arch-chroot environment.
 
 ```
