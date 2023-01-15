@@ -1,12 +1,12 @@
 ## Creating customized ISO and installing system
 ```
-git clone https://github.com/Twilight4/alis-iso.git                               # Download alis repo
-vim alis.conf                                                                     # Edit configuration
-vim alis-packages.conf                             # Edit configuration and change variables values with your preferences (packages to install)
-./build-archlinux-with-alis.sh                                                    # Build the iso
-#                                                  # Create installation media using e.g. using balenaEtcher and start the system
+git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
+vim alis.conf                                         # Edit configuration
+vim alis-packages.conf                                # Edit configuration and change variables values with your preferences (packages to install)
+./build-archlinux-with-alis.sh                        # Build the iso
+#                                                     # Create installation media using e.g. using balenaEtcher and start the system
 iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]"   # Connect to WIFI network. ip link show to know WIFI_INTERFACE
-alis                                                                              # Start installation using alis command
+alis                                                  # Start installation using alis command
 ```
 
 ## Recovery
