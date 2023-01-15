@@ -1,15 +1,6 @@
 #!/bin/bash
 #set -e
-##################################################################################################################
-# Author 	: Erik Dubois
-# Website   : https://www.erikdubois.be
-# Website   : https://www.alci.online
-# Website	: https://www.arcolinux.info
-# Website	: https://www.arcolinux.com
-# Website	: https://www.arcolinuxd.com
-# Website	: https://www.arcolinuxb.com
-# Website	: https://www.arcolinuxiso.com
-# Website	: https://www.arcolinuxforum.com
+
 ##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
@@ -39,8 +30,8 @@ echo
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 69-1"
-	buildFolder=$HOME"/Ariser-build"
-	outFolder=$HOME"/Ariser-Out"
+	buildFolder=$HOME"/Alis-build"
+	outFolder=$HOME"/Alis-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
 
 	echo "################################################################## "
@@ -147,12 +138,8 @@ echo
 	echo
 	echo "Git clone ALIS"
 	mkdir $buildFolder/archiso/airootfs/alis
-	git clone https://github.com/Twilight4/alis-installer $buildFolder/archiso/airootfs/alis
+	git clone https://github.com/Twilight4/alis-iso $buildFolder/archiso/airootfs/alis
 	
-	echo "Git clone ALIS-DEV"
-	mkdir $buildFolder/archiso/airootfs/alis-dev
-	git clone https://github.com/Twilight4/alis-installer-dev $buildFolder/archiso/airootfs/alis-dev
-
 echo
 echo "################################################################## "
 tput setaf 2
