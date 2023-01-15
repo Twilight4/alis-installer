@@ -13,7 +13,7 @@ alis                                                  # Start installation using
 Boot from the latest <a href="https://www.archlinux.org/download/">original Arch Linux installation media</a>. After boot use the following commands to start the recovery, this will allow you to enter in the arch-chroot environment.
 
 ```
-#                                  # Start the system with latest Arch Linux installation media
+#                                # Start the system with latest Arch Linux installation media
 iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]"            # Connect to WIFI network. _ip link show_ to know WIFI_INTERFACE
 git clone https://github.com/Twilight4/alis-iso.git                                        # Download alis repo
 vim alis-recovery.conf           # Edit configuration
