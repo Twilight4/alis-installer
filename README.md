@@ -1,41 +1,26 @@
-## System installation
-
-Download and boot from the latest <a href="https://www.archlinux.org/download/">original Arch Linux installation media</a>. After boot use the following commands to start the installation.
-
-Follow the <a href="https://wiki.archlinux.org/title/Arch_Linux">Arch Way</a> of doing things and learn what this script does. This will allow you to know what is happening.
-
-Internet connection is required, with wireless WIFI connection see <a href="https://wiki.archlinux.org/title/Wireless_network_configuration#Wi-Fi_Protected_Access">Wireless_network_configuration</a> to bring up WIFI connection before start the installation.
-
-Minimum usage
+## Creating customized ISO and installing system
 
 ```
-#                         # Start the system with latest Arch Linux installation media
-# loadkeys [keymap]       # Load keyboard keymap, eg. loadkeys es, loadkeys us, loadkeys de
-# curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash     # Download alis scripts
-# vim alis.conf           # Edit configuration and change variables values with your preferences (system configuration)
-# ./alis.sh               # Start installation
+git clone https://github.com/Twilight4/alis-iso.git                               # Download alis repo
+vim alis.conf                                                                     # Edit configuration
+vim alis-packages.conf                             # Edit configuration and change variables values with your preferences (packages to install)
+./build-archlinux-with-alis.sh                                                    # Build the iso
+#                                                  # Create installation media using e.g. using balenaEtcher and start the system
+iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]"   # Connect to WIFI network. ip link show to know WIFI_INTERFACE
+alis                                                                              # Start installation using alis command
 ```
 
-Advanced usage
 
-```
-#                         # Start the system with latest Arch Linux installation media
-# loadkeys [keymap]       # Load keyboard keymap, eg. loadkeys es, loadkeys us, loadkeys de
-# iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]"          # (Optional) Connect to WIFI network. _ip link show_ to know WIFI_INTERFACE.
-# curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash     # Download alis scripts
-# # curl -sL https://git.io/JeaH6 | bash                                                   # Alternative download URL with URL shortener
-# # curl -sL https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash -s -- -h [HASH_COMMIT] # Use specific version of the script based on the commit hash
-# ./alis-asciinema.sh     # (Optional) Start asciinema video recording
-# vim alis.conf           # Edit configuration and change variables values with your preferences (system configuration)
-# vim alis-packages.conf  # (Optional) Edit configuration and change variables values with your preferences (packages to install)
-#                         # (The preferred way to install packages is after system installation, see Packages installation)
-# ./alis.sh               # Start installation
-# ./alis-reboot.sh        # (Optional) Reboot the system, only necessary when REBOOT="false"
-```
+
+
+
+
+
+
+
 
 ## Packages installation
-
-After the base Arch Linux system is installed, alis can install packages with pacman, Flatpak, SDKMAN and from AUR.
+After the base Arch Linux system is installed, alis can install packages with pacman and from AUR.
 
 ```
 #                                  # After system installation start a user session
