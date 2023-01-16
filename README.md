@@ -9,11 +9,11 @@ vim alis.conf                                         # Edit configuration (espe
 
 Create installation media using e.g. using [balenaEtcher](https://www.balena.io/etcher/) and start the system
 ```
-alis                                                                              # Start installation using alis command
+alis                                                  # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
 exit
-alis-reboot                                                                       # reboot using alis-reboot command
+alis-reboot                                           # reboot using alis-reboot command
 ```
 
 ## Recovery
