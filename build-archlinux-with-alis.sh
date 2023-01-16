@@ -159,7 +159,6 @@ tput setaf 2
 echo "Phase 5 : "
 echo "- Adding time to /etc/dev-rel"
 echo "- profile.def"
-echo "- nanorc for syntax"
 echo "- alis script"
 tput sgr0
 echo "################################################################## "
