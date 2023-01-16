@@ -10,7 +10,9 @@ Create installation media using e.g. using balenaEtcher and start the system
 ```
 iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]"   # Connect to WIFI network. _ip link show_ to know WIFI_INTERFACE
 alis                                                                              # Start installation using alis command
+arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
+exit
 alis-reboot                                                                       # reboot using alibis command
 ```
 
