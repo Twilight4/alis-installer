@@ -1,6 +1,6 @@
 ## Creating customized ISO and installing system
 ```
-pacman -S archiso
+sudo pacman -S archiso
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
 cd alis-iso-git
 vim alis.conf                                         # Edit configuration
