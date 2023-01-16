@@ -2,7 +2,7 @@
 ```
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
 cd alis-iso
-vim alis.conf                                         # Edit configuration
+vim alis.conf                                         # Edit configuration (especially network vars)
 ./build-archlinux-with-alis.sh                        # Build the iso
 ```
 
