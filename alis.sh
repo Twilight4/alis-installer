@@ -568,7 +568,7 @@ function install() {
         for COUNTRY in "${REFLECTOR_COUNTRIES[@]}"; do
             local COUNTRIES+=(--country "$COUNTRY")
         done
-        pacman -Sy --noconfirm reflector
+        pacman -Sy --noconfirm reflector zram-generator
         reflector "${COUNTRIES[@]}" --latest 25 --age 24 --protocol https --completion-percent 100 --sort rate --save /etc/pacman.d/mirrorlist
     fi
 
