@@ -29,6 +29,7 @@ echo
 	isoLabel='archlinux-'$(date +%Y.%m.%d)'-x86_64.iso'
 
 	# setting of the general parameters
+	sudo pacman --noconfirm -S archiso
 	archisoRequiredVersion="archiso 69-1"
 	buildFolder=$HOME"/Alis-build"
 	outFolder=$HOME"/Alis-Out"
