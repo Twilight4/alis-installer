@@ -1,4 +1,5 @@
 ## Creating customized ISO and installing system
+Build the ISO
 ```
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
 cd alis-iso
