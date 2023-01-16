@@ -161,6 +161,7 @@ echo "Phase 5 : "
 echo "- Adding time to /etc/dev-rel"
 echo "- profile.def"
 echo "- alis script"
+echo "- alis-reboot script"
 tput sgr0
 echo "################################################################## "
 echo
@@ -177,6 +178,7 @@ echo
 	echo "copy alis"
 	mkdir -p $buildFolder/archiso/airootfs/usr/bin
 	cp alis $buildFolder/archiso/airootfs/usr/bin/alis
+	cp alis-reboot $buildFolder/archiso/airootfs/usr/bin/alis-reboot
 
 	FIND='livecd-sound'
 	REPLACE='  ["/usr/bin/alis"]="0:0:755"'
