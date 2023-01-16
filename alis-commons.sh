@@ -17,12 +17,8 @@ set -eu
 # common static variables
 ALIS_CONF_FILE="alis.conf"
 ALIS_LOG_FILE="alis.log"
-ALIS_ASCIINEMA_FILE="alis.asciinema"
 RECOVERY_CONF_FILE="alis-recovery.conf"
 RECOVERY_LOG_FILE="alis-recovery.log"
-RECOVERY_ASCIINEMA_FILE="alis-recovery.asciinema"
-PACKAGES_CONF_FILE="alis-packages.conf"
-PACKAGES_LOG_FILE="alis-packages.log"
 COMMONS_CONF_FILE="alis-commons.conf"
 PROVISION_DIRECTORY="files/"
 
