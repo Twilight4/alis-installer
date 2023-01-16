@@ -122,12 +122,6 @@ function facts_commons() {
         BIOS_TYPE="bios"
     fi
 
-    if [ -f "$ALIS_ASCIINEMA_FILE" ] || [ -f "$RECOVERY_ASCIINEMA_FILE" ]; then
-        ASCIINEMA="true"
-    else
-        ASCIINEMA="false"
-    fi
-
     if lscpu | grep -q "GenuineIntel"; then
         CPU_VENDOR="intel"
     elif lscpu | grep -q "AuthenticAMD"; then
