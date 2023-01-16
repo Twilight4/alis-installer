@@ -3,6 +3,7 @@
 sudo pacman -S archiso
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
 cd alis-iso-git
+chmod 755 /alis/*.sh
 vim alis.conf                                         # Edit configuration
 ./build-archlinux-with-alis.sh                        # Build the iso
 ```
