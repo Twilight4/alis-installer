@@ -1,6 +1,5 @@
 ## Creating customized ISO and installing system
 ```
-sudo pacman -S archiso
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
 cd alis-iso
 vim alis.conf                                         # Edit configuration
@@ -9,7 +8,6 @@ vim alis.conf                                         # Edit configuration
 
 Create installation media using e.g. using balenaEtcher and start the system
 ```
-chmod 755 /alis/*.sh
 iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]"   # Connect to WIFI network. _ip link show_ to know WIFI_INTERFACE
 alis                                                                              # Start installation using alis command
 ```
