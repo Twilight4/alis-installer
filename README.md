@@ -10,10 +10,10 @@ vim alis.conf                                         # Edit configuration (netw
 Create installation media using e.g. using [balenaEtcher](https://www.balena.io/etcher/) and start the system
 ```
 #                         # Start the system with latest Arch Linux installation media
-bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-wifi-driver.sh)   # Install my wifi driver if you have to
 alis                      # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
+bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-wifi-driver.sh)   # Install my wifi driver if you have to
 exit
 alis-reboot               # reboot using alis-reboot command
 ```
