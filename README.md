@@ -3,7 +3,7 @@ Before Installation - build the ISO
 ```
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
 cd alis-iso
-vim alis.conf                                         # Edit configuration (especially network vars and swap size)
+vim alis.conf                                         # Edit configuration (network, intel drivers if you have and swap size)
 ./build-archlinux-with-alis.sh                        # Build the iso
 ```
 
