@@ -1853,14 +1853,7 @@ function copy_logs() {
             sed -i "s/${ESCAPED_USER_PASSWORD}/******/g" "$FILE"
         fi
     fi
-    if [ -f "$ALIS_ASCIINEMA_FILE" ]; then
-        local SOURCE_FILE="$ALIS_ASCIINEMA_FILE"
-        local FILE="${MNT_DIR}/var/log/alis/$ALIS_ASCIINEMA_FILE"
-
-        mkdir -p "${MNT_DIR}"/var/log/alis
-        cp "$SOURCE_FILE" "$FILE"
-        chown root:root "$FILE"
-        chmod 600 "$FILE"
+    
         if [ -n "$ESCAPED_LUKS_PASSWORD" ]; then
             sed -i "s/${ESCAPED_LUKS_PASSWORD}/******/g" "$FILE"
         fi
