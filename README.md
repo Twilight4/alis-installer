@@ -1,5 +1,5 @@
 ## Creating customized ISO and installing system
-Build the ISO
+Before Installation - build the ISO
 ```
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis repo
 cd alis-iso
@@ -9,11 +9,13 @@ vim alis.conf                                         # Edit configuration (espe
 
 Create installation media using e.g. using [balenaEtcher](https://www.balena.io/etcher/) and start the system
 ```
-alis                                                  # Start installation using alis command
+#                         # Start the system with latest Arch Linux installation media
+bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-wifi-driver.sh)   # Install my wifi driver if you have to
+alis                      # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
 exit
-alis-reboot                                           # reboot using alis-reboot command
+alis-reboot               # reboot using alis-reboot command
 ```
 
 ## Recovery
