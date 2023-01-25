@@ -10,7 +10,6 @@ vim alis.conf                                         # Edit configuration (netw
 Create installation media using e.g. using [balenaEtcher](https://www.balena.io/etcher/) and start the system
 ```
 #                         # Start the system with latest Arch Linux installation media
-#                         # WARNING: Don't eject the flashdrive while in installation media
 alis                      # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
