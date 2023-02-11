@@ -26,7 +26,8 @@ Boot from the latest <a href="https://www.archlinux.org/download/">original Arch
 ```
 #                                # Start the system with latest Arch Linux installation media
 iwctl --passphrase "[WIFI_KEY]" station [WIFI_INTERFACE] connect "[WIFI_ESSID]"            # Connect to WIFI network. _ip link show_ to know WIFI_INTERFACE
-git clone https://github.com/Twilight4/alis-iso.git                                        # Download alis repo
+curl -sL https://git.io/JeaH6 | bash                                                       # Download official alis repo
+./alis-recovery-asciinema.sh     # (Optional) Start asciinema video recording
 vim alis-recovery.conf           # Edit configuration
 ./alis-recovery.sh               # Start recovery
 ./alis-recovery-reboot.sh        # Reboot the system
