@@ -4,7 +4,7 @@ Before Installation - build the ISO
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis-iso repo
 git clone https://github.com/picodotdev/alis.git      # Download official alis repo
 mv alis-iso/* alis/
-cd alis
+cd alis/
 vim alis.conf                                         # Edit configuration (network, intel drivers if you have and swap size)
 ./build-archlinux-with-alis.sh                        # Build the iso
 ```
