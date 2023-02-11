@@ -31,4 +31,4 @@ FIND='#ParallelDownloads = 5'
 REPLACE='ParallelDownloads = 5'
 sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
 cd /alis
-./alis.sh
+sh alis.sh
