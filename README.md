@@ -13,6 +13,7 @@ cp ~/Alis-Out/select.iso /run/media/twilight/Ventoy/  # Create installation medi
 
 Start the system with Arch Linux installation media
 ```
+chmod +x /alis/*.sh                                   # Add executable
 alis                                                  # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
