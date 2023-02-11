@@ -142,6 +142,7 @@ echo
 	git clone https://github.com/picodotdev/alis $buildFolder/archiso/airootfs/alis
 	cp ~/alis-iso/alis.conf $buildFolder/archiso/airootfs/alis/alis.conf
 	cp ~/alis-iso/alis $buildFolder/archiso/airootfs/alis/alis
+	cp ~/alis-iso/alis-reboot.sh $buildFolder/archiso/airootfs/alis/alis-reboot.sh
 	cp ~/alis-iso/install-tweaks.sh $buildFolder/archiso/airootfs/alis/install-tweaks.sh
 	cp ~/alis-iso/install-tweaks $buildFolder/archiso/airootfs/alis/install-tweaks
 	cp ~/alis-iso/alis-reboot $buildFolder/archiso/airootfs/alis/alis-reboot
