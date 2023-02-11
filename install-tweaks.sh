@@ -84,14 +84,14 @@ auth		required	pam_wheel.so use_uid
 auth		required	pam_unix.so
 account		required	pam_unix.so
 session		required	pam_unix.so
-' | sudo tee --append /etc/pacman.conf
+' | sudo tee --append /etc/pam.d/su
 
 # ZRAM configuration
 echo '
 [zram0]
 zram-fraction = 1
 max-zram-size = 8192
-' | sudo tee --append /etc/pacman.conf
+' | sudo tee --append /etc/systemd/zram-generator.conf
 
 # Randomize Mac Address
 echo '
@@ -101,7 +101,7 @@ wifi.scan-rand-mac-address=yes
 wifi.cloned-mac-address=random
 ethernet.cloned-mac-address=random
 connection.stable-id=${CONNECTION}/${BOOT}
-' | sudo tee --append /etc/pacman.conf
+' | sudo tee --append /etc/NetworkManager/conf.d/00-macrandomize.conf
 
 chmod 600 /etc/NetworkManager/conf.d/00-macrandomize.conf
 
@@ -110,7 +110,7 @@ echo '
 [connectivity]
 uri=http://www.archlinux.org/check_network_status.txt
 interval=0
-' | sudo tee --append /etc/pacman.conf
+' | sudo tee --append /etc/NetworkManager/conf.d/20-connectivity.conf
 
 chmod 600 /etc/NetworkManager/conf.d/20-connectivity.conf
 
@@ -118,7 +118,7 @@ chmod 600 /etc/NetworkManager/conf.d/20-connectivity.conf
 echo '
 [connection]
 ipv6.ip6-privacy=2
-' | sudo tee --append /etc/pacman.conf
+' | sudo tee --append /etc/NetworkManager/conf.d/ip6-privacy.conf
 
 chmod 600 /etc/NetworkManager/conf.d/ip6-privacy.conf
 
@@ -131,7 +131,7 @@ vm.oom_kill_allocating_task=1
 vm.overcommit_memory=1
 vm.swappiness=10
 vm.vfs_cache_pressure=50
-' | sudo tee --append /etc/pacman.conf
+' | sudo tee --append /etc/sysctl.d/98-misc.conf
 
 ######################################################################
 # Configuring the system
