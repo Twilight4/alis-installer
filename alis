@@ -32,4 +32,4 @@ REPLACE='ParallelDownloads = 5'
 sed -i "s/$FIND/$REPLACE/g" /etc/pacman.conf
 cd /alis
 chmod +x /alis/*.sh
-sh alis.sh
+./alis.sh
