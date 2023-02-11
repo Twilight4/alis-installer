@@ -139,7 +139,9 @@ echo
 	echo
 	echo "Git clone ALIS"
 	mkdir $buildFolder/archiso/airootfs/alis
-	git clone https://github.com/Twilight4/alis-iso $buildFolder/archiso/airootfs/alis
+	git clone https://github.com/picodotdev/alis $buildFolder/archiso/airootfs/alis
+	cp ~/alis-iso/alis.conf $buildFolder/archiso/airootfs/alis.conf
+	cp ~/alis-iso/alis $buildFolder/archiso/airootfs/alis
 	
 echo
 echo "################################################################## "
