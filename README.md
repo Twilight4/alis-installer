@@ -13,12 +13,13 @@ cp ~/Alis-Out/select.iso /run/media/twilight/Ventoy/  # Create installation medi
 
 Start the system with Arch Linux installation media
 ```
+#                                                     # Eject the usb thumb drive
 alis                                                  # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-wifi-driver.sh)   # Install my wifi driver if you have to
 exit
-alis-reboot                                           # reboot using alis-reboot command
+alis-reboot                                           # Reboot using alis-reboot command
 ```
 
 ## Recovery
