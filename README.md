@@ -6,19 +6,19 @@ git clone https://github.com/picodotdev/alis.git      # Download official alis r
 cd alis-iso/
 vim alis.conf                                         # Edit configuration (network, intel drivers if you have and swap size)
 ./build-archlinux-with-alis.sh                        # Build the iso
-#                         # plug in the flash drive
+#                                                     # plug in the flash drive
 sudo ventoy -i /dev/sdX
 cp Alis-Out/select.iso /run/media/twilight/Ventoy/    # Create installation media using ventoy
 ```
 
 Start the system with Arch Linux installation media
 ```
-alis                      # Start installation using alis command
+alis                                                  # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-wifi-driver.sh)   # Install my wifi driver if you have to
 exit
-alis-reboot               # reboot using alis-reboot command
+alis-reboot                                           # reboot using alis-reboot command
 ```
 
 ## Recovery
