@@ -142,6 +142,9 @@ echo
 	git clone https://github.com/picodotdev/alis $buildFolder/archiso/airootfs/alis
 	cp ~/alis-iso/alis.conf $buildFolder/archiso/airootfs/alis/alis.conf
 	cp ~/alis-iso/alis $buildFolder/archiso/airootfs/alis/alis
+	cp ~/alis-iso/install-tweaks.sh $buildFolder/archiso/airootfs/alis/install-tweaks.sh
+	cp ~/alis-iso/install-tweaks $buildFolder/archiso/airootfs/alis/install-tweaks
+	cp ~/alis-iso/alis-reboot $buildFolder/archiso/airootfs/alis/alis-reboot
 	
 echo
 echo "################################################################## "
@@ -180,6 +183,8 @@ echo
 	echo "copy alis"
 	mkdir -p $buildFolder/archiso/airootfs/usr/bin
 	cp alis $buildFolder/archiso/airootfs/usr/bin/alis
+	cp alis-reboot $buildFolder/archiso/airootfs/usr/bin/alis-reboot
+	cp install-tweaks $buildFolder/archiso/airootfs/usr/bin/install-tweaks
 
 	FIND='livecd-sound'
 	REPLACE='  ["/usr/bin/alis"]="0:0:755"'
