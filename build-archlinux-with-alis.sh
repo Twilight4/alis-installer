@@ -178,12 +178,24 @@ echo
 	echo "copy alis"
 	mkdir -p $buildFolder/archiso/airootfs/usr/bin
 	cp alis $buildFolder/archiso/airootfs/usr/bin/alis
-	cp alis-reboot $buildFolder/archiso/airootfs/usr/bin/alis-reboot
 
 	FIND='livecd-sound'
 	REPLACE='  ["/usr/bin/alis"]="0:0:755"'
 	find $buildFolder/archiso/profiledef.sh -type f -exec sed -i "/$FIND/a $REPLACE" {} \;
 
+	echo
+	echo "mkinitcpio xz gone"
+	FIND='COMPRESSION="xz"'
+	REPLACE='#COMPRESSION="xz"'
+	find $buildFolder/archiso/airootfs/etc/mkinitcpio.conf -type f -exec sed -i s/$FIND/$REPLACE/g {} \;
+	echo
+
+	echo
+	echo "mkinitcpio into zstd"
+	FIND='#COMPRESSION="zstd"'
+	REPLACE='COMPRESSION="zstd"'
+	find $buildFolder/archiso/airootfs/etc/mkinitcpio.conf -type f -exec sed -i "/$FIND/a $REPLACE" {} \;
+	echo
 
 #echo
 #echo "################################################################## "
