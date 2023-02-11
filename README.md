@@ -6,6 +6,7 @@ cd alis-iso/
 vim alis.conf                                         # Edit configuration (network, intel drivers if you have and swap size)
 ./build-archlinux-with-alis.sh                        # Build the iso
 #                                                     # Plug in the flash drive
+umount /dev/sdX                                       # Umount the flash drive in order to create the installation media
 sudo ventoy -i /dev/sdX                               # Check which device is the flash drive with fdisk -l or lsblk
 cp ~/Alis-Out/select.iso /run/media/twilight/Ventoy/    # Create installation media using ventoy
 ```
