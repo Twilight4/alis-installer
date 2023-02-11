@@ -7,7 +7,7 @@ vim alis.conf                                         # Edit configuration (netw
 ./build-archlinux-with-alis.sh                        # Build the iso
 #                                                     # Plug in the flash drive
 sudo ventoy -i /dev/sdX                               # Check which device is the flash drive with fdisk -l or lsblk
-cp Alis-Out/select.iso /run/media/twilight/Ventoy/    # Create installation media using ventoy
+cp ~/Alis-Out/select.iso /run/media/twilight/Ventoy/    # Create installation media using ventoy
 ```
 
 Start the system with Arch Linux installation media
