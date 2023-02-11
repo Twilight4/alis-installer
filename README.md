@@ -6,11 +6,13 @@ git clone https://github.com/picodotdev/alis.git      # Download official alis r
 cd alis-iso/
 vim alis.conf                                         # Edit configuration (network, intel drivers if you have and swap size)
 ./build-archlinux-with-alis.sh                        # Build the iso
+#                         # plug in the flash drive
+sudo ventoy -i /dev/sdX
+cp Alis-Out/select.iso /run/media/twilight/Ventoy/    # Create installation media using ventoy
 ```
 
-Create installation media using e.g. using [balenaEtcher](https://www.balena.io/etcher/) and start the system
 ```
-#                         # Start the system with latest Arch Linux installation media
+#                         # Start the system with Arch Linux installation media
 alis                      # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-install/main/install-only-tweaks.sh)   # install my tweaks
