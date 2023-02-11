@@ -1,5 +1,6 @@
 #!bin/bash
 
+arch-chroot /mnt /bin/bash -e <<EOF
 #####################################################################
 # Pacman configuration
 #####################################################################
@@ -73,7 +74,7 @@ sed -i 's/nullok//g' /etc/pam.d/system-auth
 echo "* hard core 0" >> /etc/security/limits.conf
 
 # Disable su for non-wheel users
-bash -c 'cat > /etc/pam.d/su' <<-'EOF'
+echo '
 #%PAM-1.0
 auth		sufficient	pam_rootok.so
 # Uncomment the following line to implicitly trust users in the "wheel" group.
@@ -83,46 +84,46 @@ auth		required	pam_wheel.so use_uid
 auth		required	pam_unix.so
 account		required	pam_unix.so
 session		required	pam_unix.so
-EOF
+' | sudo tee --append /etc/pacman.conf
 
 # ZRAM configuration
-bash -c 'cat > /etc/systemd/zram-generator.conf' <<-'EOF'
+echo '
 [zram0]
 zram-fraction = 1
 max-zram-size = 8192
-EOF
+' | sudo tee --append /etc/pacman.conf
 
 # Randomize Mac Address
-bash -c 'cat > /etc/NetworkManager/conf.d/00-macrandomize.conf' <<-'EOF'
+echo '
 [device]
 wifi.scan-rand-mac-address=yes
 [connection]
 wifi.cloned-mac-address=random
 ethernet.cloned-mac-address=random
 connection.stable-id=${CONNECTION}/${BOOT}
-EOF
+' | sudo tee --append /etc/pacman.conf
 
 chmod 600 /etc/NetworkManager/conf.d/00-macrandomize.conf
 
 # Disable Connectivity Check
-bash -c 'cat > /etc/NetworkManager/conf.d/20-connectivity.conf' <<-'EOF'
+echo '
 [connectivity]
 uri=http://www.archlinux.org/check_network_status.txt
 interval=0
-EOF
+' | sudo tee --append /etc/pacman.conf
 
 chmod 600 /etc/NetworkManager/conf.d/20-connectivity.conf
 
 # Enable IPv6 privacy extensions
-bash -c 'cat > /etc/NetworkManager/conf.d/ip6-privacy.conf' <<-'EOF'
+echo '
 [connection]
 ipv6.ip6-privacy=2
-EOF
+' | sudo tee --append /etc/pacman.conf
 
 chmod 600 /etc/NetworkManager/conf.d/ip6-privacy.conf
 
 # Improve virtual memory performance
-bash -c 'cat > /etc/sysctl.d/98-misc.conf' <<-'EOF'
+echo '
 vm.dirty_background_ratio=15
 vm.dirty_ratio=40
 vm.oom_dump_tasks=0
@@ -130,7 +131,7 @@ vm.oom_kill_allocating_task=1
 vm.overcommit_memory=1
 vm.swappiness=10
 vm.vfs_cache_pressure=50
-EOF
+' | sudo tee --append /etc/pacman.conf
 
 ######################################################################
 # Configuring the system
@@ -164,3 +165,4 @@ curl https://raw.githubusercontent.com/Twilight4/dotfiles/main/install.sh > /hom
 
 # Finishing up
 echo "Done, you may now reboot and afterward run user install.sh script and reboot again."
+EOF
