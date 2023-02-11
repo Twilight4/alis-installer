@@ -180,7 +180,7 @@ echo
 	REPLACE='  ["/alis/start.sh"]="0:0:755"'
 	find $buildFolder/archiso/profiledef.sh -type f -exec sed -i "/$FIND/a $REPLACE" {} \;
 
-	echo "copy alis"
+	echo "copy binaries"
 	mkdir -p $buildFolder/archiso/airootfs/usr/bin
 	cp alis $buildFolder/archiso/airootfs/usr/bin/alis
 	cp alis-reboot $buildFolder/archiso/airootfs/usr/bin/alis-reboot
