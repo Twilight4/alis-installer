@@ -16,7 +16,7 @@ Start the system with Arch Linux installation media
 #                                                     # Eject the usb thumb drive
 alis                                                  # Start installation using alis command
 arch-chroot /mnt
-bash curl -s <(https://raw.githubusercontent.com/Twilight4/alis-iso/main/install-tweaks.sh)    # install my security and performance tweaks
+bash <(curl -s https://raw.githubusercontent.com/Twilight4/alis-iso/main/install-tweaks.sh)    # install my security and performance tweaks
 exit
 alis-reboot                                           # Reboot using alis-reboot command
 ```
