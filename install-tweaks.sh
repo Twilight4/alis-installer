@@ -159,8 +159,5 @@ echo "log_group = audit" >> /etc/audit/auditd.conf
 # Disabling systemd-timesyncd
 #systemctl disable systemd-timesyncd
 
-# Installing user script
-curl https://raw.githubusercontent.com/Twilight4/dotfiles/main/install.sh > /home/twilight/install.sh
-
 # Finishing up
-echo "Done, you may now reboot and afterward run user install.sh script and reboot again."
+echo "Done, you may now reboot and afterward curl and run user install.sh script and reboot again."
