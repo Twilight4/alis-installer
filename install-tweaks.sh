@@ -20,6 +20,10 @@ echo '
 [chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist' | sudo tee --append /etc/pacman.conf
 pacman -Syy
+# Adding CachyOS Repository for Enhanced Arch Linux Performance
+wget https://mirror.cachyos.org/cachyos-repo.tar.xz
+tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+sudo ./cachyos-repo.sh && cd -
 ## Enable Arcolinux repo
 #bash <(curl -s https://raw.githubusercontent.com/arcolinux/arcolinux-spices/master/usr/share/arcolinux-spices/scripts/get-the-keys-and-repos.sh)
 #pacman -Syy
