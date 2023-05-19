@@ -50,15 +50,15 @@ pacman -Syy
 
 ##### Comment out if you are using systemd-boot instead of grub #######
 # Enabling CPU Mitigations
-curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_cpu_mitigations.cfg >> /etc/grub.d/40_cpu_mitigations.cfg
+#curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_cpu_mitigations.cfg >> /etc/grub.d/40_cpu_mitigations.cfg
 # Distrusting the CPU
-curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_distrust_cpu.cfg >> /etc/grub.d/40_distrust_cpu.cfg
+#curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_distrust_cpu.cfg >> /etc/grub.d/40_distrust_cpu.cfg
 # Enabling IOMMU
-curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_enable_iommu.cfg >> /etc/grub.d/40_enable_iommu.cfg
+#curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/default/grub.d/40_enable_iommu.cfg >> /etc/grub.d/40_enable_iommu.cfg
 # Enabling NTS
 curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/chrony.conf >> /etc/chrony.conf
 # Setting GRUB configuration file permissions
-chmod 755 /etc/grub.d/*
+#chmod 755 /etc/grub.d/*
 
 # Blacklisting kernel modules
 curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/modprobe.d/30_security-misc.conf >> /etc/modprobe.d/30_security-misc.conf
@@ -140,7 +140,7 @@ EOF
 # Configuring the system
 ######################################################################
 
-# Warning: These configs are correct ONLY for ext4 and GRUB bootloader. I'm using my personal alis installer script with btrfs.
+# Warning: These configs are correct ONLY for ext4 and GRUB bootloader.
 #curl https://raw.githubusercontent.com/Twilight4/arch-install-old/main/grub > /etc/default/grub
 #grub-mkconfig -o /boot/grub/grub.cfg
 # lz4 for fast compression - improved boot time performance
@@ -159,9 +159,6 @@ echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 
 # Change audit logging group
 echo "log_group = audit" >> /etc/audit/auditd.conf
-
-# Disabling systemd-timesyncd
-#systemctl disable systemd-timesyncd
 
 # Finishing up
 echo "Done, you may now reboot and afterward curl and run user install.sh script and reboot again."
