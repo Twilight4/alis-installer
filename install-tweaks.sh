@@ -9,7 +9,8 @@ pacman-key --init
 pacman-key --populate
 pacman -Syy
 
-# Copy my pacman configuration
+# Backup and copy my pacman config
+mv /etc/pacman.conf /etc/pacman.conf.bak
 curl https://raw.githubusercontent.com/Twilight4/arch-install/main/pacman.conf > /etc/pacman.conf
 pacman -Syy
 # Enable Chaotic-AUR repo
