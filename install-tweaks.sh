@@ -62,6 +62,7 @@ curl https://raw.githubusercontent.com/GrapheneOS/infrastructure/main/chrony.con
 
 # Blacklisting kernel modules
 curl https://raw.githubusercontent.com/Kicksecure/security-misc/master/etc/modprobe.d/30_security-misc.conf >> /etc/modprobe.d/30_security-misc.conf
+sed -i '14,15 s/^/#/' /etc/modprobe.d/30_security-misc.conf       # don't disable bluetooth
 chmod 600 /etc/modprobe.d/*
 
 # Security kernel settings
