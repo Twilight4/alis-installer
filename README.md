@@ -1,5 +1,5 @@
 ## Creating customized ISO and installing system
-Before Installation - build the ISO
+### Before Installation - build the ISO
 ```
 git clone https://github.com/Twilight4/alis-iso.git   # Download alis-iso repo
 cd alis-iso/
@@ -11,7 +11,7 @@ sudo ventoy -i -S -g /dev/sdX                         # Create installation medi
 cp ~/Alis-Out/select.iso /run/media/twilight/Ventoy/  # Copy the crafted iso file to the installation media
 ```
 
-Start the system with Arch Linux installation media
+### Start the system with Arch Linux installation media
 ```
 #                                                     # Eject the usb thumb drive
 alis                                                  # Start installation using alis command
@@ -22,7 +22,7 @@ alis-reboot                                           # Reboot using alis-reboot
 ```
 
 ## Recovery
-Boot from the latest <a href="https://www.archlinux.org/download/">original Arch Linux installation media</a>. After boot use the following commands to start the recovery, this will allow you to enter in the arch-chroot environment.
+### Boot from the latest <a href="https://www.archlinux.org/download/">original Arch Linux installation media</a>. After boot use the following commands to start the recovery, this will allow you to enter in the arch-chroot environment.
 
 ```
 #                                # Start the system with latest Arch Linux installation media
