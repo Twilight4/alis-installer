@@ -8,7 +8,7 @@ vim alis.conf                                         # Edit configuration (netw
 #                                                     # Plug in the flash drive
 umount /dev/sdX                                       # Check which device is the flash drive with fdisk -l or lsblk and Umount the flash drive
 sudo ventoy -i -S -g /dev/sdX                         # Create installation media using ventoy
-cp ~/Alis-Out/select.iso /run/media/twilight/Ventoy/  # Copy the crafted iso file to the installation media
+cp ~/Alis-Out/select.iso /run/media/$(whoami)/Ventoy/  # Copy the crafted iso file to the installation media
 ```
 
 ### Start the system with Arch Linux installation media
