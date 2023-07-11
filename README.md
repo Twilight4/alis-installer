@@ -41,17 +41,17 @@ SSH install and cloud-init allows to install Arch Linux unattended and automated
 Build the cloud-init ISO, mount it in the VM along side the official Arch Linux installation media, start the VM and get its IP address.
 
 ```bash
-$ ./alis-cloud-init-iso.sh
+./alis-cloud-init-iso.sh
 ```
 
 SSH to the VM.
 
 ```bash
-$ ./alis-cloud-init-ssh.sh -i "${IP_ADDRESS}"
+./alis-cloud-init-ssh.sh -i "${IP_ADDRESS}"
 ```
 
 Or, start a unattended installation with the provided configuration.
 
 ```bash
-$ ./alis-cloud-init-ssh.sh -i "${IP_ADDRESS}" -c "alis-config-efi-ext4-systemd.sh"
+./alis-cloud-init-ssh.sh -i "${IP_ADDRESS}" -c "alis-config-efi-ext4-systemd.sh"
 ```
