@@ -22,7 +22,7 @@ alis-reboot                                           # Reboot using alis-reboot
 ```
 
 ## Recovery
-### Boot from the latest <a href="https://www.archlinux.org/download/">original Arch Linux installation media</a>. After boot use the following commands to start the recovery, this will allow you to enter in the arch-chroot environment.
+Boot from the latest <a href="https://www.archlinux.org/download/">original Arch Linux installation media</a>. After boot use the following commands to start the recovery, this will allow you to enter in the arch-chroot environment.
 
 ```bash
 #                                # Start the system with latest Arch Linux installation media
