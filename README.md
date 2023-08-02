@@ -1,4 +1,4 @@
-## Creating customized ISO and installing system
+## Creating Customized ISO and System Installation
 ### Before Installation - build the ISO
 ```bash
 git clone https://github.com/Twilight4/alis-iso.git    # Download alis-iso repository
