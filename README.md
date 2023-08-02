@@ -17,7 +17,7 @@ cp ~/Alis-Out/select.iso /run/media/$(whoami)/Ventoy/  # Copy the generated iso 
 alis                                                  # Start installation using alis command
 arch-chroot /mnt
 bash <(curl -s https://raw.githubusercontent.com/Twilight4/alis-iso/main/install-tweaks.sh) 
-                                                      # Install security and performance tweaks
+#                                                     # Install security and performance tweaks
 exit
 alis-reboot                                           # Reboot using alis-reboot command
 ```
