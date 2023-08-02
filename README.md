@@ -16,7 +16,7 @@ cp ~/Alis-Out/select.iso /run/media/$(whoami)/Ventoy/  # Copy the generated iso 
 #                                                     # Eject the usb thumb drive
 alis                                                  # Start installation using alis command
 arch-chroot /mnt
-bash <(curl -s https://raw.githubusercontent.com/Twilight4/alis-iso/main/install-tweaks.sh) 
+bash <(curl -s https://raw.githubusercontent.com/Twilight4/arch-setup/main/install-tweaks.sh)
 #                                                     # Install security and performance tweaks
 exit
 alis-reboot                                           # Reboot using alis-reboot command
